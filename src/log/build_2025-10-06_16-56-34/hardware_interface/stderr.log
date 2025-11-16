@@ -1,0 +1,13 @@
+In file included from [01m[K/home/fv/workspace/ros_ur_driver/src/ros2_control/hardware_interface/include/hardware_interface/actuator_interface.hpp:18[m[K,
+                 from [01m[K/home/fv/workspace/ros_ur_driver/src/ros2_control/hardware_interface/include/hardware_interface/actuator.hpp:18[m[K,
+                 from [01m[K/home/fv/workspace/ros_ur_driver/src/ros2_control/hardware_interface/include/hardware_interface/resource_manager.hpp:23[m[K,
+                 from [01m[K/home/fv/workspace/ros_ur_driver/src/ros2_control/hardware_interface/src/resource_manager.cpp:15[m[K:
+[01m[K/home/fv/workspace/ros_ur_driver/src/ros2_control/hardware_interface/include/hardware_interface/hardware_component_interface.hpp:27:10:[m[K [01;31m[Kfatal error: [m[Kcontrol_msgs/msg/hardware_status.hpp: No such file or directory
+   27 | #include [01;31m[K"control_msgs/msg/hardware_status.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/hardware_interface.dir/build.make:90: CMakeFiles/hardware_interface.dir/src/resource_manager.cpp.o] Error 1
+gmake[2]: *** Waiting for unfinished jobs....
+gmake[1]: *** [CMakeFiles/Makefile2:198: CMakeFiles/hardware_interface.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+gmake: *** [Makefile:146: all] Error 2

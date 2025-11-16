@@ -1,0 +1,55 @@
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ros2_control_cmake: 0.2.1 (/opt/ros/jazzy/share/ros2_control_cmake/cmake)
+-- Compiler warnings enabled for GNU
+-- Detected GCC Version: 13.3.0 (Major: 13, Minor: 3)
+-- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+-- Found Python3: /home/fv/venv/bin/python3 (found version "3.13.5") found components: Interpreter 
+-- Found rclcpp: 28.1.12 (/opt/ros/jazzy/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+-- Found rosidl_generator_cpp: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+-- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Found rclcpp_lifecycle: 28.1.12 (/opt/ros/jazzy/share/rclcpp_lifecycle/cmake)
+-- Configuring done (0.8s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/fv/workspace/ros_ur_driver/src/build/kinematics_interface
+[ 50%] [32mBuilding CXX object CMakeFiles/kinematics_interface.dir/src/kinematics_interface.cpp.o[0m
+[100%] [32m[1mLinking CXX shared library libkinematics_interface.so[0m
+[100%] Built target kinematics_interface
+-- Install configuration: "Release"
+-- Installing: /home/fv/workspace/ros_ur_driver/src/install/kinematics_interface/include/kinematics_interface
+-- Installing: /home/fv/workspace/ros_ur_driver/src/install/kinematics_interface/include/kinematics_interface/kinematics_interface
+-- Installing: /home/fv/workspace/ros_ur_driver/src/install/kinematics_interface/include/kinematics_interface/kinematics_interface/kinematics_interface.hpp
+-- Installing: /home/fv/workspace/ros_ur_driver/src/install/kinematics_interface/lib/libkinematics_interface.so
+-- Set non-toolchain portion of runtime path of "/home/fv/workspace/ros_ur_driver/src/install/kinematics_interface/lib/libkinematics_interface.so" to ""
+-- Installing: /home/fv/workspace/ros_ur_driver/src/install/kinematics_interface/share/kinematics_interface/environment/library_path.sh
+-- Installing: /home/fv/workspace/ros_ur_driver/src/install/kinematics_interface/share/kinematics_interface/environment/library_path.dsv
+-- Installing: /home/fv/workspace/ros_ur_driver/src/install/kinematics_interface/share/ament_index/resource_index/package_run_dependencies/kinematics_interface
+-- Installing: /home/fv/workspace/ros_ur_driver/src/install/kinematics_interface/share/ament_index/resource_index/parent_prefix_path/kinematics_interface
+-- Installing: /home/fv/workspace/ros_ur_driver/src/install/kinematics_interface/share/kinematics_interface/environment/ament_prefix_path.sh
+-- Installing: /home/fv/workspace/ros_ur_driver/src/install/kinematics_interface/share/kinematics_interface/environment/ament_prefix_path.dsv
+-- Installing: /home/fv/workspace/ros_ur_driver/src/install/kinematics_interface/share/kinematics_interface/environment/path.sh
+-- Installing: /home/fv/workspace/ros_ur_driver/src/install/kinematics_interface/share/kinematics_interface/environment/path.dsv
+-- Installing: /home/fv/workspace/ros_ur_driver/src/install/kinematics_interface/share/kinematics_interface/local_setup.bash
+-- Installing: /home/fv/workspace/ros_ur_driver/src/install/kinematics_interface/share/kinematics_interface/local_setup.sh
+-- Installing: /home/fv/workspace/ros_ur_driver/src/install/kinematics_interface/share/kinematics_interface/local_setup.zsh
+-- Installing: /home/fv/workspace/ros_ur_driver/src/install/kinematics_interface/share/kinematics_interface/local_setup.dsv
+-- Installing: /home/fv/workspace/ros_ur_driver/src/install/kinematics_interface/share/kinematics_interface/package.dsv
+-- Installing: /home/fv/workspace/ros_ur_driver/src/install/kinematics_interface/share/ament_index/resource_index/packages/kinematics_interface
+-- Installing: /home/fv/workspace/ros_ur_driver/src/install/kinematics_interface/share/kinematics_interface/cmake/export_kinematics_interfaceExport.cmake
+-- Installing: /home/fv/workspace/ros_ur_driver/src/install/kinematics_interface/share/kinematics_interface/cmake/export_kinematics_interfaceExport-release.cmake
+-- Installing: /home/fv/workspace/ros_ur_driver/src/install/kinematics_interface/share/kinematics_interface/cmake/ament_cmake_export_targets-extras.cmake
+-- Installing: /home/fv/workspace/ros_ur_driver/src/install/kinematics_interface/share/kinematics_interface/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Installing: /home/fv/workspace/ros_ur_driver/src/install/kinematics_interface/share/kinematics_interface/cmake/kinematics_interfaceConfig.cmake
+-- Installing: /home/fv/workspace/ros_ur_driver/src/install/kinematics_interface/share/kinematics_interface/cmake/kinematics_interfaceConfig-version.cmake
+-- Installing: /home/fv/workspace/ros_ur_driver/src/install/kinematics_interface/share/kinematics_interface/package.xml

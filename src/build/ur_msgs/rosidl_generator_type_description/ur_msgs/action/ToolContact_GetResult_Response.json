@@ -1,0 +1,56 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "ur_msgs/action/ToolContact_GetResult_Response",
+      "fields": [
+        {
+          "name": "status",
+          "type": {
+            "type_id": 2,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "result",
+          "type": {
+            "type_id": 1,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": "ur_msgs/action/ToolContact_Result"
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": [
+      {
+        "type_name": "ur_msgs/action/ToolContact_Result",
+        "fields": [
+          {
+            "name": "structure_needs_at_least_one_member",
+            "type": {
+              "type_id": 3,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      }
+    ]
+  },
+  "type_hashes": [
+    {
+      "type_name": "ur_msgs/action/ToolContact_GetResult_Response",
+      "hash_string": "RIHS01_2e8578b4deff0bd4a039fc7dd7cbae9e304bfa953bf1dded4a625d4e2a2e9545"
+    },
+    {
+      "type_name": "ur_msgs/action/ToolContact_Result",
+      "hash_string": "RIHS01_6ce8fe5311ee036632f59f812d51b42ea1a82c4362bb465cfa191e2791bdee74"
+    }
+  ]
+}

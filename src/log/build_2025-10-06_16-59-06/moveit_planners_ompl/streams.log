@@ -1,0 +1,70 @@
+[0.018s] Invoking command in '/home/fv/workspace/ros_ur_driver/src/build/moveit_planners_ompl': AMENT_PREFIX_PATH=/home/fv/workspace/ros_ur_driver/src/install/moveit_ros_planning:/home/fv/workspace/ros_ur_driver/src/install/moveit_ros_occupancy_map_monitor:/home/fv/workspace/ros_ur_driver/src/install/moveit_core:/home/fv/workspace/ros_ur_driver/src/install/moveit_configs_utils:/home/fv/workspace/ros_ur_driver/src/install/srdfdom:/home/fv/workspace/ros_ur_driver/src/install/moveit_msgs:/home/fv/workspace/ros_ur_driver/src/install/moveit_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/fv/workspace/ros_ur_driver/src/install/moveit_ros_planning:/home/fv/workspace/ros_ur_driver/src/install/moveit_ros_occupancy_map_monitor:/home/fv/workspace/ros_ur_driver/src/install/moveit_core:/home/fv/workspace/ros_ur_driver/src/install/srdfdom:/home/fv/workspace/ros_ur_driver/src/install/moveit_msgs:/home/fv/workspace/ros_ur_driver/src/install/moveit_common:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy CONDA_PROMPT_MODIFIER=(base) DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/fv/workspace/ros_ur_driver/src/install/moveit_ros_planning/lib:/home/fv/workspace/ros_ur_driver/src/install/moveit_ros_occupancy_map_monitor/lib:/home/fv/workspace/ros_ur_driver/src/install/moveit_core/lib:/home/fv/workspace/ros_ur_driver/src/install/srdfdom/lib:/home/fv/workspace/ros_ur_driver/src/install/moveit_msgs/lib:${LD_LIBRARY_PATH} PATH=/home/fv/workspace/ros_ur_driver/src/install/moveit_core/bin:${PATH} PS1=(venv) (base) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ PYTHONPATH=/home/fv/workspace/ros_ur_driver/src/install/moveit_configs_utils/lib/python3.12/site-packages:/home/fv/workspace/ros_ur_driver/src/install/srdfdom/lib/python3.13/site-packages:/home/fv/workspace/ros_ur_driver/src/install/moveit_msgs/lib/python3.13/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(venv) /usr/bin/cmake /home/fv/workspace/ros_ur_driver/src/moveit2/moveit_planners/ompl -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/home/fv/workspace/ros_ur_driver/src/install/moveit_planners_ompl
+[0.068s] -- The CXX compiler identification is GNU 13.3.0
+[0.079s] -- Detecting CXX compiler ABI info
+[0.142s] -- Detecting CXX compiler ABI info - done
+[0.149s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.149s] -- Detecting CXX compile features
+[0.149s] -- Detecting CXX compile features - done
+[0.150s] -- Found moveit_common: 2.14.1 (/home/fv/workspace/ros_ur_driver/src/install/moveit_common/share/moveit_common/cmake)
+[0.151s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.238s] -- Found Python3: /home/fv/venv/bin/python3 (found version "3.13.5") found components: Interpreter 
+[0.469s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: system filesystem date_time thread serialization 
+[0.470s] -- Found moveit_core: 2.14.1 (/home/fv/workspace/ros_ur_driver/src/install/moveit_core/share/moveit_core/cmake)
+[0.481s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: chrono date_time filesystem iostreams program_options regex serialization system thread 
+[0.524s] -- Found parameter_traits: 0.5.0 (/opt/ros/jazzy/share/parameter_traits/cmake)
+[0.547s] -- Found rosidl_generator_c: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.556s] -- Found rosidl_generator_cpp: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.566s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.577s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.627s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.629s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.687s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[0.700s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[0.718s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.771s] -- Found rclcpp_lifecycle: 28.1.12 (/opt/ros/jazzy/share/rclcpp_lifecycle/cmake)
+[0.795s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: filesystem 
+[0.883s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[0.883s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[1.102s] -- Found moveit_ros_planning: 2.14.1 (/home/fv/workspace/ros_ur_driver/src/install/moveit_ros_planning/share/moveit_ros_planning/cmake)
+[1.106s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: system filesystem date_time program_options thread chrono 
+[1.142s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: serialization filesystem system 
+[1.144s] -- Found ompl: /opt/ros/jazzy/include/ompl-1.7;/usr/include;/usr/include/eigen3  
+[1.344s] -- Found OpenMP_CXX: -fopenmp (found version "4.5") 
+[1.344s] -- Found OpenMP: TRUE (found version "4.5")  
+[1.353s] -- Found ament_cmake_gtest: 2.5.4 (/opt/ros/jazzy/share/ament_cmake_gtest/cmake)
+[1.356s] -- Found gtest sources under '/opt/ros/jazzy/src/gtest_vendor': C++ tests using 'Google Test' will be built
+[1.389s] -- The C compiler identification is GNU 13.3.0
+[1.399s] -- Detecting C compiler ABI info
+[1.475s] -- Detecting C compiler ABI info - done
+[1.482s] -- Check for working C compiler: /usr/bin/cc - skipped
+[1.482s] -- Detecting C compile features
+[1.482s] -- Detecting C compile features - done
+[1.484s] -- Found Threads: TRUE  
+[1.507s] -- Configuring done (1.5s)
+[1.621s] -- Generating done (0.1s)
+[1.661s] -- Build files have been written to: /home/fv/workspace/ros_ur_driver/src/build/moveit_planners_ompl
+[1.686s] Invoked command in '/home/fv/workspace/ros_ur_driver/src/build/moveit_planners_ompl' returned '0': AMENT_PREFIX_PATH=/home/fv/workspace/ros_ur_driver/src/install/moveit_ros_planning:/home/fv/workspace/ros_ur_driver/src/install/moveit_ros_occupancy_map_monitor:/home/fv/workspace/ros_ur_driver/src/install/moveit_core:/home/fv/workspace/ros_ur_driver/src/install/moveit_configs_utils:/home/fv/workspace/ros_ur_driver/src/install/srdfdom:/home/fv/workspace/ros_ur_driver/src/install/moveit_msgs:/home/fv/workspace/ros_ur_driver/src/install/moveit_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/fv/workspace/ros_ur_driver/src/install/moveit_ros_planning:/home/fv/workspace/ros_ur_driver/src/install/moveit_ros_occupancy_map_monitor:/home/fv/workspace/ros_ur_driver/src/install/moveit_core:/home/fv/workspace/ros_ur_driver/src/install/srdfdom:/home/fv/workspace/ros_ur_driver/src/install/moveit_msgs:/home/fv/workspace/ros_ur_driver/src/install/moveit_common:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy CONDA_PROMPT_MODIFIER=(base) DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/fv/workspace/ros_ur_driver/src/install/moveit_ros_planning/lib:/home/fv/workspace/ros_ur_driver/src/install/moveit_ros_occupancy_map_monitor/lib:/home/fv/workspace/ros_ur_driver/src/install/moveit_core/lib:/home/fv/workspace/ros_ur_driver/src/install/srdfdom/lib:/home/fv/workspace/ros_ur_driver/src/install/moveit_msgs/lib:${LD_LIBRARY_PATH} PATH=/home/fv/workspace/ros_ur_driver/src/install/moveit_core/bin:${PATH} PS1=(venv) (base) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ PYTHONPATH=/home/fv/workspace/ros_ur_driver/src/install/moveit_configs_utils/lib/python3.12/site-packages:/home/fv/workspace/ros_ur_driver/src/install/srdfdom/lib/python3.13/site-packages:/home/fv/workspace/ros_ur_driver/src/install/moveit_msgs/lib/python3.13/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(venv) /usr/bin/cmake /home/fv/workspace/ros_ur_driver/src/moveit2/moveit_planners/ompl -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/home/fv/workspace/ros_ur_driver/src/install/moveit_planners_ompl
+[1.686s] Invoking command in '/home/fv/workspace/ros_ur_driver/src/build/moveit_planners_ompl': AMENT_PREFIX_PATH=/home/fv/workspace/ros_ur_driver/src/install/moveit_ros_planning:/home/fv/workspace/ros_ur_driver/src/install/moveit_ros_occupancy_map_monitor:/home/fv/workspace/ros_ur_driver/src/install/moveit_core:/home/fv/workspace/ros_ur_driver/src/install/moveit_configs_utils:/home/fv/workspace/ros_ur_driver/src/install/srdfdom:/home/fv/workspace/ros_ur_driver/src/install/moveit_msgs:/home/fv/workspace/ros_ur_driver/src/install/moveit_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/fv/workspace/ros_ur_driver/src/install/moveit_ros_planning:/home/fv/workspace/ros_ur_driver/src/install/moveit_ros_occupancy_map_monitor:/home/fv/workspace/ros_ur_driver/src/install/moveit_core:/home/fv/workspace/ros_ur_driver/src/install/srdfdom:/home/fv/workspace/ros_ur_driver/src/install/moveit_msgs:/home/fv/workspace/ros_ur_driver/src/install/moveit_common:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy CONDA_PROMPT_MODIFIER=(base) DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/fv/workspace/ros_ur_driver/src/install/moveit_ros_planning/lib:/home/fv/workspace/ros_ur_driver/src/install/moveit_ros_occupancy_map_monitor/lib:/home/fv/workspace/ros_ur_driver/src/install/moveit_core/lib:/home/fv/workspace/ros_ur_driver/src/install/srdfdom/lib:/home/fv/workspace/ros_ur_driver/src/install/moveit_msgs/lib:${LD_LIBRARY_PATH} PATH=/home/fv/workspace/ros_ur_driver/src/install/moveit_core/bin:${PATH} PS1=(venv) (base) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ PYTHONPATH=/home/fv/workspace/ros_ur_driver/src/install/moveit_configs_utils/lib/python3.12/site-packages:/home/fv/workspace/ros_ur_driver/src/install/srdfdom/lib/python3.13/site-packages:/home/fv/workspace/ros_ur_driver/src/install/moveit_msgs/lib/python3.13/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(venv) /usr/bin/cmake --build /home/fv/workspace/ros_ur_driver/src/build/moveit_planners_ompl -- -j20 -l20
+[1.764s] [  2%] [32mBuilding CXX object gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o[0m
+[1.765s] [  7%] [32mBuilding CXX object ompl_interface/CMakeFiles/moveit_ompl_interface.dir/src/ompl_interface.cpp.o[0m
+[1.765s] [  7%] [32mBuilding CXX object gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o[0m
+[1.771s] [ 10%] [32mBuilding CXX object ompl_interface/CMakeFiles/moveit_ompl_interface.dir/src/planning_context_manager.cpp.o[0m
+[1.771s] [ 12%] [32mBuilding CXX object ompl_interface/CMakeFiles/moveit_ompl_interface.dir/src/parameterization/model_based_state_space.cpp.o[0m
+[1.772s] [ 15%] [32mBuilding CXX object ompl_interface/CMakeFiles/moveit_ompl_interface.dir/src/model_based_planning_context.cpp.o[0m
+[1.775s] [ 17%] [32mBuilding CXX object ompl_interface/CMakeFiles/moveit_ompl_interface.dir/src/parameterization/joint_space/constrained_planning_state_space.cpp.o[0m
+[1.775s] [ 20%] [32mBuilding CXX object ompl_interface/CMakeFiles/moveit_ompl_interface.dir/src/parameterization/model_based_state_space_factory.cpp.o[0m
+[1.785s] [ 22%] [32mBuilding CXX object ompl_interface/CMakeFiles/moveit_ompl_interface.dir/src/parameterization/joint_space/constrained_planning_state_space_factory.cpp.o[0m
+[1.785s] [ 25%] [32mBuilding CXX object ompl_interface/CMakeFiles/moveit_ompl_interface.dir/src/parameterization/joint_space/joint_model_state_space.cpp.o[0m
+[1.791s] [ 27%] [32mBuilding CXX object ompl_interface/CMakeFiles/moveit_ompl_interface.dir/src/parameterization/joint_space/joint_model_state_space_factory.cpp.o[0m
+[1.800s] [ 32%] [32mBuilding CXX object ompl_interface/CMakeFiles/moveit_ompl_interface.dir/src/detail/ompl_constraints.cpp.o[0m
+[1.800s] [ 32%] [32mBuilding CXX object ompl_interface/CMakeFiles/moveit_ompl_interface.dir/src/parameterization/work_space/pose_model_state_space.cpp.o[0m
+[1.800s] [ 35%] [32mBuilding CXX object ompl_interface/CMakeFiles/moveit_ompl_interface.dir/src/detail/threadsafe_state_storage.cpp.o[0m
+[1.804s] [ 37%] [32mBuilding CXX object ompl_interface/CMakeFiles/moveit_ompl_interface.dir/src/parameterization/work_space/pose_model_state_space_factory.cpp.o[0m
+[1.804s] [ 40%] [32mBuilding CXX object ompl_interface/CMakeFiles/moveit_ompl_interface.dir/src/detail/projection_evaluators.cpp.o[0m
+[1.807s] [ 42%] [32mBuilding CXX object ompl_interface/CMakeFiles/moveit_ompl_interface.dir/src/detail/constraints_library.cpp.o[0m
+[1.808s] [ 45%] [32mBuilding CXX object ompl_interface/CMakeFiles/moveit_ompl_interface.dir/src/detail/state_validity_checker.cpp.o[0m
+[1.814s] [ 47%] [32mBuilding CXX object ompl_interface/CMakeFiles/moveit_ompl_interface.dir/src/detail/goal_union.cpp.o[0m
+[1.821s] [ 50%] [32mBuilding CXX object ompl_interface/CMakeFiles/moveit_ompl_interface.dir/src/detail/constrained_sampler.cpp.o[0m
+[4.340s] [ 52%] [32m[1mLinking CXX static library libgtest_main.a[0m
+[4.447s] [ 52%] Built target gtest_main
+[4.482s] [ 55%] [32mBuilding CXX object ompl_interface/CMakeFiles/moveit_ompl_interface.dir/src/detail/constrained_goal_sampler.cpp.o[0m

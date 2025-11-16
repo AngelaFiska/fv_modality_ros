@@ -1,0 +1,44 @@
+[0.926s] Invoking command in '/home/fv/workspace/ros_ur_driver/src/ros2_controllers/ros2_controllers_test_nodes': CONDA_PROMPT_MODIFIER=(base) DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(venv) (base) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ PYTHONPATH=/home/fv/workspace/ros_ur_driver/src/build/ros2_controllers_test_nodes/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/fv/workspace/ros_ur_driver/src/install/ros2_controllers_test_nodes/lib/python3.12/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(venv) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/ros2_controllers_test_nodes build --build-base /home/fv/workspace/ros_ur_driver/src/build/ros2_controllers_test_nodes/build install --record /home/fv/workspace/ros_ur_driver/src/build/ros2_controllers_test_nodes/install.log --single-version-externally-managed install_data
+[1.668s] running egg_info
+[1.668s] creating ../../build/ros2_controllers_test_nodes/ros2_controllers_test_nodes.egg-info
+[1.720s] writing ../../build/ros2_controllers_test_nodes/ros2_controllers_test_nodes.egg-info/PKG-INFO
+[1.720s] writing dependency_links to ../../build/ros2_controllers_test_nodes/ros2_controllers_test_nodes.egg-info/dependency_links.txt
+[1.720s] writing entry points to ../../build/ros2_controllers_test_nodes/ros2_controllers_test_nodes.egg-info/entry_points.txt
+[1.720s] writing requirements to ../../build/ros2_controllers_test_nodes/ros2_controllers_test_nodes.egg-info/requires.txt
+[1.721s] writing top-level names to ../../build/ros2_controllers_test_nodes/ros2_controllers_test_nodes.egg-info/top_level.txt
+[1.721s] writing manifest file '../../build/ros2_controllers_test_nodes/ros2_controllers_test_nodes.egg-info/SOURCES.txt'
+[1.809s] reading manifest file '../../build/ros2_controllers_test_nodes/ros2_controllers_test_nodes.egg-info/SOURCES.txt'
+[1.810s] writing manifest file '../../build/ros2_controllers_test_nodes/ros2_controllers_test_nodes.egg-info/SOURCES.txt'
+[1.810s] running build
+[1.810s] running build_py
+[1.814s] creating /home/fv/workspace/ros_ur_driver/src/build/ros2_controllers_test_nodes/build
+[1.814s] creating /home/fv/workspace/ros_ur_driver/src/build/ros2_controllers_test_nodes/build/lib
+[1.814s] creating /home/fv/workspace/ros_ur_driver/src/build/ros2_controllers_test_nodes/build/lib/ros2_controllers_test_nodes
+[1.814s] copying ros2_controllers_test_nodes/publisher_joint_trajectory_controller.py -> /home/fv/workspace/ros_ur_driver/src/build/ros2_controllers_test_nodes/build/lib/ros2_controllers_test_nodes
+[1.814s] copying ros2_controllers_test_nodes/publisher_forward_position_controller.py -> /home/fv/workspace/ros_ur_driver/src/build/ros2_controllers_test_nodes/build/lib/ros2_controllers_test_nodes
+[1.814s] copying ros2_controllers_test_nodes/__init__.py -> /home/fv/workspace/ros_ur_driver/src/build/ros2_controllers_test_nodes/build/lib/ros2_controllers_test_nodes
+[1.815s] running install
+[1.824s] running install_lib
+[1.877s] creating /home/fv/workspace/ros_ur_driver/src/install/ros2_controllers_test_nodes/lib/python3.12/site-packages/ros2_controllers_test_nodes
+[1.884s] copying /home/fv/workspace/ros_ur_driver/src/build/ros2_controllers_test_nodes/build/lib/ros2_controllers_test_nodes/publisher_joint_trajectory_controller.py -> /home/fv/workspace/ros_ur_driver/src/install/ros2_controllers_test_nodes/lib/python3.12/site-packages/ros2_controllers_test_nodes
+[1.885s] copying /home/fv/workspace/ros_ur_driver/src/build/ros2_controllers_test_nodes/build/lib/ros2_controllers_test_nodes/publisher_forward_position_controller.py -> /home/fv/workspace/ros_ur_driver/src/install/ros2_controllers_test_nodes/lib/python3.12/site-packages/ros2_controllers_test_nodes
+[1.885s] copying /home/fv/workspace/ros_ur_driver/src/build/ros2_controllers_test_nodes/build/lib/ros2_controllers_test_nodes/__init__.py -> /home/fv/workspace/ros_ur_driver/src/install/ros2_controllers_test_nodes/lib/python3.12/site-packages/ros2_controllers_test_nodes
+[1.885s] byte-compiling /home/fv/workspace/ros_ur_driver/src/install/ros2_controllers_test_nodes/lib/python3.12/site-packages/ros2_controllers_test_nodes/publisher_joint_trajectory_controller.py to publisher_joint_trajectory_controller.cpython-312.pyc
+[1.885s] byte-compiling /home/fv/workspace/ros_ur_driver/src/install/ros2_controllers_test_nodes/lib/python3.12/site-packages/ros2_controllers_test_nodes/publisher_forward_position_controller.py to publisher_forward_position_controller.cpython-312.pyc
+[1.887s] byte-compiling /home/fv/workspace/ros_ur_driver/src/install/ros2_controllers_test_nodes/lib/python3.12/site-packages/ros2_controllers_test_nodes/__init__.py to __init__.cpython-312.pyc
+[1.888s] running install_data
+[1.888s] creating /home/fv/workspace/ros_ur_driver/src/install/ros2_controllers_test_nodes/share/ament_index
+[1.888s] creating /home/fv/workspace/ros_ur_driver/src/install/ros2_controllers_test_nodes/share/ament_index/resource_index
+[1.889s] creating /home/fv/workspace/ros_ur_driver/src/install/ros2_controllers_test_nodes/share/ament_index/resource_index/packages
+[1.889s] copying resource/ros2_controllers_test_nodes -> /home/fv/workspace/ros_ur_driver/src/install/ros2_controllers_test_nodes/share/ament_index/resource_index/packages
+[1.889s] copying package.xml -> /home/fv/workspace/ros_ur_driver/src/install/ros2_controllers_test_nodes/share/ros2_controllers_test_nodes
+[1.889s] creating /home/fv/workspace/ros_ur_driver/src/install/ros2_controllers_test_nodes/share/ros2_controllers_test_nodes/test
+[1.889s] copying test/rrbot_joint_trajectory_publisher.yaml -> /home/fv/workspace/ros_ur_driver/src/install/ros2_controllers_test_nodes/share/ros2_controllers_test_nodes/test
+[1.889s] copying test/rrbot_forward_position_publisher.yaml -> /home/fv/workspace/ros_ur_driver/src/install/ros2_controllers_test_nodes/share/ros2_controllers_test_nodes/test
+[1.889s] running install_egg_info
+[1.945s] Copying ../../build/ros2_controllers_test_nodes/ros2_controllers_test_nodes.egg-info to /home/fv/workspace/ros_ur_driver/src/install/ros2_controllers_test_nodes/lib/python3.12/site-packages/ros2_controllers_test_nodes-4.33.0-py3.12.egg-info
+[1.946s] running install_scripts
+[2.299s] Installing publisher_forward_position_controller script to /home/fv/workspace/ros_ur_driver/src/install/ros2_controllers_test_nodes/lib/ros2_controllers_test_nodes
+[2.302s] Installing publisher_joint_trajectory_controller script to /home/fv/workspace/ros_ur_driver/src/install/ros2_controllers_test_nodes/lib/ros2_controllers_test_nodes
+[2.302s] writing list of installed files to '/home/fv/workspace/ros_ur_driver/src/build/ros2_controllers_test_nodes/install.log'
+[2.479s] Invoked command in '/home/fv/workspace/ros_ur_driver/src/ros2_controllers/ros2_controllers_test_nodes' returned '0': CONDA_PROMPT_MODIFIER=(base) DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(venv) (base) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ PYTHONPATH=/home/fv/workspace/ros_ur_driver/src/build/ros2_controllers_test_nodes/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/fv/workspace/ros_ur_driver/src/install/ros2_controllers_test_nodes/lib/python3.12/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(venv) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/ros2_controllers_test_nodes build --build-base /home/fv/workspace/ros_ur_driver/src/build/ros2_controllers_test_nodes/build install --record /home/fv/workspace/ros_ur_driver/src/build/ros2_controllers_test_nodes/install.log --single-version-externally-managed install_data

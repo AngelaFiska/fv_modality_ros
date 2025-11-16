@@ -1,0 +1,61 @@
+[0.019s] Invoking command in '/home/fv/workspace/ros_ur_driver/src/build/kinematics_interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy CONDA_PROMPT_MODIFIER=(base) DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(venv) (base) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(venv) /usr/bin/cmake /home/fv/workspace/ros_ur_driver/src/kinematics_interface/kinematics_interface -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/home/fv/workspace/ros_ur_driver/src/install/kinematics_interface
+[0.273s] -- The CXX compiler identification is GNU 13.3.0
+[0.273s] -- Detecting CXX compiler ABI info
+[0.273s] -- Detecting CXX compiler ABI info - done
+[0.273s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.273s] -- Detecting CXX compile features
+[0.274s] -- Detecting CXX compile features - done
+[0.274s] -- Found ros2_control_cmake: 0.2.1 (/opt/ros/jazzy/share/ros2_control_cmake/cmake)
+[0.274s] -- Compiler warnings enabled for GNU
+[0.274s] -- Detected GCC Version: 13.3.0 (Major: 13, Minor: 3)
+[0.274s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.274s] -- Found Python3: /home/fv/venv/bin/python3 (found version "3.13.5") found components: Interpreter 
+[0.333s] -- Found rclcpp: 28.1.12 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.376s] -- Found rosidl_generator_c: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.391s] -- Found rosidl_generator_cpp: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.409s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.428s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.518s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.521s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.586s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[0.599s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[0.615s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.685s] -- Found rclcpp_lifecycle: 28.1.12 (/opt/ros/jazzy/share/rclcpp_lifecycle/cmake)
+[0.860s] -- Configuring done (0.8s)
+[0.881s] -- Generating done (0.0s)
+[0.886s] -- Build files have been written to: /home/fv/workspace/ros_ur_driver/src/build/kinematics_interface
+[0.902s] Invoked command in '/home/fv/workspace/ros_ur_driver/src/build/kinematics_interface' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy CONDA_PROMPT_MODIFIER=(base) DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(venv) (base) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(venv) /usr/bin/cmake /home/fv/workspace/ros_ur_driver/src/kinematics_interface/kinematics_interface -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/home/fv/workspace/ros_ur_driver/src/install/kinematics_interface
+[0.909s] Invoking command in '/home/fv/workspace/ros_ur_driver/src/build/kinematics_interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy CONDA_PROMPT_MODIFIER=(base) DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(venv) (base) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(venv) /usr/bin/cmake --build /home/fv/workspace/ros_ur_driver/src/build/kinematics_interface -- -j20 -l20
+[1.018s] [ 50%] [32mBuilding CXX object CMakeFiles/kinematics_interface.dir/src/kinematics_interface.cpp.o[0m
+[3.419s] [100%] [32m[1mLinking CXX shared library libkinematics_interface.so[0m
+[3.532s] [100%] Built target kinematics_interface
+[3.543s] Invoked command in '/home/fv/workspace/ros_ur_driver/src/build/kinematics_interface' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy CONDA_PROMPT_MODIFIER=(base) DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(venv) (base) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(venv) /usr/bin/cmake --build /home/fv/workspace/ros_ur_driver/src/build/kinematics_interface -- -j20 -l20
+[3.544s] Invoking command in '/home/fv/workspace/ros_ur_driver/src/build/kinematics_interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy CONDA_PROMPT_MODIFIER=(base) DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(venv) (base) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(venv) /usr/bin/cmake --install /home/fv/workspace/ros_ur_driver/src/build/kinematics_interface
+[3.550s] -- Install configuration: "Release"
+[3.550s] -- Installing: /home/fv/workspace/ros_ur_driver/src/install/kinematics_interface/include/kinematics_interface
+[3.550s] -- Installing: /home/fv/workspace/ros_ur_driver/src/install/kinematics_interface/include/kinematics_interface/kinematics_interface
+[3.551s] -- Installing: /home/fv/workspace/ros_ur_driver/src/install/kinematics_interface/include/kinematics_interface/kinematics_interface/kinematics_interface.hpp
+[3.551s] -- Installing: /home/fv/workspace/ros_ur_driver/src/install/kinematics_interface/lib/libkinematics_interface.so
+[3.551s] -- Set non-toolchain portion of runtime path of "/home/fv/workspace/ros_ur_driver/src/install/kinematics_interface/lib/libkinematics_interface.so" to ""
+[3.552s] -- Installing: /home/fv/workspace/ros_ur_driver/src/install/kinematics_interface/share/kinematics_interface/environment/library_path.sh
+[3.552s] -- Installing: /home/fv/workspace/ros_ur_driver/src/install/kinematics_interface/share/kinematics_interface/environment/library_path.dsv
+[3.552s] -- Installing: /home/fv/workspace/ros_ur_driver/src/install/kinematics_interface/share/ament_index/resource_index/package_run_dependencies/kinematics_interface
+[3.553s] -- Installing: /home/fv/workspace/ros_ur_driver/src/install/kinematics_interface/share/ament_index/resource_index/parent_prefix_path/kinematics_interface
+[3.553s] -- Installing: /home/fv/workspace/ros_ur_driver/src/install/kinematics_interface/share/kinematics_interface/environment/ament_prefix_path.sh
+[3.553s] -- Installing: /home/fv/workspace/ros_ur_driver/src/install/kinematics_interface/share/kinematics_interface/environment/ament_prefix_path.dsv
+[3.553s] -- Installing: /home/fv/workspace/ros_ur_driver/src/install/kinematics_interface/share/kinematics_interface/environment/path.sh
+[3.554s] -- Installing: /home/fv/workspace/ros_ur_driver/src/install/kinematics_interface/share/kinematics_interface/environment/path.dsv
+[3.554s] -- Installing: /home/fv/workspace/ros_ur_driver/src/install/kinematics_interface/share/kinematics_interface/local_setup.bash
+[3.554s] -- Installing: /home/fv/workspace/ros_ur_driver/src/install/kinematics_interface/share/kinematics_interface/local_setup.sh
+[3.554s] -- Installing: /home/fv/workspace/ros_ur_driver/src/install/kinematics_interface/share/kinematics_interface/local_setup.zsh
+[3.555s] -- Installing: /home/fv/workspace/ros_ur_driver/src/install/kinematics_interface/share/kinematics_interface/local_setup.dsv
+[3.555s] -- Installing: /home/fv/workspace/ros_ur_driver/src/install/kinematics_interface/share/kinematics_interface/package.dsv
+[3.555s] -- Installing: /home/fv/workspace/ros_ur_driver/src/install/kinematics_interface/share/ament_index/resource_index/packages/kinematics_interface
+[3.556s] -- Installing: /home/fv/workspace/ros_ur_driver/src/install/kinematics_interface/share/kinematics_interface/cmake/export_kinematics_interfaceExport.cmake
+[3.556s] -- Installing: /home/fv/workspace/ros_ur_driver/src/install/kinematics_interface/share/kinematics_interface/cmake/export_kinematics_interfaceExport-release.cmake
+[3.556s] -- Installing: /home/fv/workspace/ros_ur_driver/src/install/kinematics_interface/share/kinematics_interface/cmake/ament_cmake_export_targets-extras.cmake
+[3.556s] -- Installing: /home/fv/workspace/ros_ur_driver/src/install/kinematics_interface/share/kinematics_interface/cmake/ament_cmake_export_dependencies-extras.cmake
+[3.557s] -- Installing: /home/fv/workspace/ros_ur_driver/src/install/kinematics_interface/share/kinematics_interface/cmake/kinematics_interfaceConfig.cmake
+[3.557s] -- Installing: /home/fv/workspace/ros_ur_driver/src/install/kinematics_interface/share/kinematics_interface/cmake/kinematics_interfaceConfig-version.cmake
+[3.558s] -- Installing: /home/fv/workspace/ros_ur_driver/src/install/kinematics_interface/share/kinematics_interface/package.xml
+[3.560s] Invoked command in '/home/fv/workspace/ros_ur_driver/src/build/kinematics_interface' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy CONDA_PROMPT_MODIFIER=(base) DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(venv) (base) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(venv) /usr/bin/cmake --install /home/fv/workspace/ros_ur_driver/src/build/kinematics_interface

@@ -1,0 +1,220 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Release-f7a92bdd05a376fb4944.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.14.0"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						14
+					]
+				},
+				{
+					"build" : "examples",
+					"jsonFile" : "directory-examples-Release-1c8b83b621b6ef38a245.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.14.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "examples",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13
+					]
+				}
+			],
+			"name" : "Release",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "ur_client_library",
+					"targetIndexes" : 
+					[
+						14
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1
+					],
+					"name" : "ur_driver_examples",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 1,
+					"id" : "dashboard_example::@714eac15f71a94114fdf",
+					"jsonFile" : "target-dashboard_example-Release-2dad34cd4c5d0b4f444b.json",
+					"name" : "dashboard_example",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "direct_torque_control_example::@714eac15f71a94114fdf",
+					"jsonFile" : "target-direct_torque_control_example-Release-d6a367898df773d777a4.json",
+					"name" : "direct_torque_control_example",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "driver_example::@714eac15f71a94114fdf",
+					"jsonFile" : "target-driver_example-Release-3272b4eaad08c9c95003.json",
+					"name" : "driver_example",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "force_mode_example::@714eac15f71a94114fdf",
+					"jsonFile" : "target-force_mode_example-Release-591846634806483c153a.json",
+					"name" : "force_mode_example",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "freedrive_example::@714eac15f71a94114fdf",
+					"jsonFile" : "target-freedrive_example-Release-048d2d4ce6dc51232ab3.json",
+					"name" : "freedrive_example",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "instruction_executor::@714eac15f71a94114fdf",
+					"jsonFile" : "target-instruction_executor-Release-0e15f523b7caed119dbd.json",
+					"name" : "instruction_executor",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "primary_pipeline_calibration_example::@714eac15f71a94114fdf",
+					"jsonFile" : "target-primary_pipeline_calibration_example-Release-9d1127d89898f022486c.json",
+					"name" : "primary_pipeline_calibration_example",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "primary_pipeline_example::@714eac15f71a94114fdf",
+					"jsonFile" : "target-primary_pipeline_example-Release-addaf0ad0ea03dc9605e.json",
+					"name" : "primary_pipeline_example",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "rtde_client_example::@714eac15f71a94114fdf",
+					"jsonFile" : "target-rtde_client_example-Release-b35d3f4d9bc3c4b8f641.json",
+					"name" : "rtde_client_example",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "script_command_interface_example::@714eac15f71a94114fdf",
+					"jsonFile" : "target-script_command_interface_example-Release-de8ad938fb8563f05474.json",
+					"name" : "script_command_interface_example",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "script_sender_example::@714eac15f71a94114fdf",
+					"jsonFile" : "target-script_sender_example-Release-0b4cd166cf95591a7f06.json",
+					"name" : "script_sender_example",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "spline_example::@714eac15f71a94114fdf",
+					"jsonFile" : "target-spline_example-Release-950c084b85fe1465026a.json",
+					"name" : "spline_example",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "tool_contact_example::@714eac15f71a94114fdf",
+					"jsonFile" : "target-tool_contact_example-Release-fef3072f065b3794e70d.json",
+					"name" : "tool_contact_example",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "trajectory_point_interface_example::@714eac15f71a94114fdf",
+					"jsonFile" : "target-trajectory_point_interface_example-Release-09828dad1ef3b7f33283.json",
+					"name" : "trajectory_point_interface_example",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "urcl::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-urcl-Release-d458041194980be09839.json",
+					"name" : "urcl",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/fv/workspace/ros_ur_driver/src/build/ur_client_library",
+		"source" : "/home/fv/workspace/ros_ur_driver/src/Universal_Robots_Client_Library"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

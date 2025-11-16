@@ -1,0 +1,4 @@
+[01m[K/home/fv/workspace/ros_ur_driver/src/control_toolbox/control_toolbox/test/pid_ros_parameters_tests.cpp:[m[K In member function ‘[01m[Kvirtual void PidParametersTest_PrintValuesLogsExpectedContent_Test::[01;32m[KTestBody[m[K()[m[K’:
+[01m[K/home/fv/workspace/ros_ur_driver/src/control_toolbox/control_toolbox/test/pid_ros_parameters_tests.cpp:763:35:[m[K [01;35m[Kwarning: [m[Kignoring return value of ‘[01m[Krcutils_ret_t[01;32m[K rcutils_logging_set_logger_level[m[K(const char*, int)[m[K’ declared with attribute ‘[01m[Kwarn_unused_result[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-result-Wunused-result]8;;[m[K]
+  763 |   [01;35m[Krcutils_logging_set_logger_level(kLoggerName, RCUTILS_LOG_SEVERITY_INFO)[m[K;
+      |   [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K

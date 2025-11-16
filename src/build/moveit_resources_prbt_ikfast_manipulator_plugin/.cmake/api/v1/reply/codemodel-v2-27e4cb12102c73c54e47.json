@@ -1,0 +1,88 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Release-5336154b05bcd9c6feae.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"name" : "Release",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "moveit_resources_prbt_ikfast_manipulator_plugin",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "moveit_resources_prbt_ikfast_manipulator_plugin_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-moveit_resources_prbt_ikfast_manipulator_plugin_uninstall-Release-5c4b7cbbd018791cf829.json",
+					"name" : "moveit_resources_prbt_ikfast_manipulator_plugin_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "prbt_ikfast_kinematics_parameters::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-prbt_ikfast_kinematics_parameters-Release-c7b0a67b2ba5245a609f.json",
+					"name" : "prbt_ikfast_kinematics_parameters",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "prbt_manipulator_moveit_ikfast_plugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-prbt_manipulator_moveit_ikfast_plugin-Release-3fc90dd357e6e4983e12.json",
+					"name" : "prbt_manipulator_moveit_ikfast_plugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-Release-25be507e51c459e0721b.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/fv/workspace/ros_ur_driver/src/build/moveit_resources_prbt_ikfast_manipulator_plugin",
+		"source" : "/home/fv/workspace/ros_ur_driver/src/moveit2/moveit_planners/test_configs/prbt_ikfast_manipulator_plugin"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

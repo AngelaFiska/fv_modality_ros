@@ -11,11 +11,9 @@ from std_msgs.msg import Float32
 from moveit_msgs.srv import GetPositionIK
 from pymoveit2 import MoveIt2
 from pymoveit2.robots import ur as robot
-import numpy as np
-import time
 
 # ===== 可调参数 =====
-PAUSE_AFTER_STEP     = 0.0
+PAUSE_AFTER_STEP     = 0.0            # 不停顿（仍保留此参数但不再使用固定等待）
 TCP_OFFSET_M         = (0.0, 0.0, 0.0)
 MATRIX_IS_BASE_T_TCP = False
 UNITS_IN_MM          = True
@@ -26,32 +24,31 @@ WAIT_TIMEOUT         = 120.0
 # ===== threshold =====
 threshold = 3.0
 
-# 末端期望速度（仅用于计算 sleep，不影响规划）
-EE_SPEED_MPS         = 0.05  # 5 cm/s
+# 新增：用于估算“运动周期”的期望末端线速度（仅用于计算 sleep，不影响规划）
+EE_SPEED_MPS         = 0.1           # 例如 0.05 m/s = 5 cm/s
 
-# “肘上”分支种子
-SEED_DEG             = [0.0, -90.0, 90.0, -90.0, -90.0, 0.0]
+# 你偏好的“肘上”分支
+SEED_DEG             = [0.000000, -90.000000, 90.000000, -90.000000, -90.000000, 0.000000]
 
-# 两个往返目标
+# ===== 两个往返目标 =====
 T_A_TCP_TO_BASE = [
-    [-0.0,  1.0, -0.0,    0.0],
-    [ 1.0,  0.0, -0.0, -200.0],
-    [-0.0, -0.0, -1.0,  343.35],
-    [ 0.0,  0.0,  0.0,    1.0],
+    [ -0.000000,  1.000000, -0.000000,    0.0 ],
+    [  1.000000,  0.000000, -0.000000, -200.0 ],
+    [ -0.000000, -0.000000, -1.000000,  343.350000 ],
+    [  0.000000,  0.000000,  0.000000,    1.000000 ],
 ]
 
 T_B_TCP_TO_BASE = [
-    [-0.0,  1.0, -0.0,    0.0],
-    [ 1.0,  0.0, -0.0, -200.0],
-    [-0.0, -0.0, -1.0,  243.35],
-    [ 0.0,  0.0,  0.0,    1.0],
+    [ -0.000000,  1.000000, -0.000000,    0.0 ],
+    [  1.000000,  0.000000, -0.000000, -200.0 ],
+    [ -0.000000, -0.000000, -1.000000,  243.350000 ],
+    [  0.000000,  0.000000,  0.000000,    1.000000 ],
 ]
 
 class FVRecipMoveNode(Node):
     def __init__(self):
         super().__init__("pose_move_node")
 
-        # MoveIt2 初始化
         self.moveit2 = MoveIt2(
             node=self,
             joint_names=robot.joint_names(),
@@ -60,26 +57,32 @@ class FVRecipMoveNode(Node):
             group_name=robot.MOVE_GROUP_ARM,
         )
 
-        # 最新关节状态
         self._latest_js = None
-
-        # 订阅 joint_states 和力传感器
         self.create_subscription(JointState, "/joint_states", self._js_cb, 10)
         self.sub_wrench = self.create_subscription(
-            WrenchStamped, '/force_torque_sensor_broadcaster/wrench', self.callback, 10
+            WrenchStamped,
+            '/force_torque_sensor_broadcaster/wrench',
+            self.callback,
+            10
         )
         self.sub_rze = self.create_subscription(
-            Float32, '/rze_force', self.callback_rze, 10
+            Float32,
+            '/rze_force',
+            self.callback_rze,
+            10
         )
         self.sub_fv = self.create_subscription(
-            Float32, '/fv_force', self.callback_fv, 10
+            Float32,
+            '/fv_force',
+            self.callback_fv,
+            10
         )
 
         self.latest_ft_force = 0.0
         self.latest_rze_force = 0.0
         self.latest_fv_force = 0.0
+        
 
-        # 两个目标点
         self.goals = self.poses_from_4x4_list(
             T_list=[T_A_TCP_TO_BASE, T_B_TCP_TO_BASE],
             frame_id=robot.base_link_name(),
@@ -88,16 +91,11 @@ class FVRecipMoveNode(Node):
             units_in_mm=UNITS_IN_MM,
         )
 
-        # 等待初始 joint_state
-        while self._latest_js is None and rclpy.ok():
-            self.get_logger().info("Waiting for initial joint states...")
-            rclpy.spin_once(self, timeout_sec=0.01)
-
         sleep(0.5)
         self.execute_goals()
 
-    # ===== 主循环 =====
     def execute_goals(self):
+        import time
         seed_deg = SEED_DEG[:]
         if len(self.goals) != 2:
             self.get_logger().error("Need exactly two goals for ping-pong.")
@@ -105,57 +103,57 @@ class FVRecipMoveNode(Node):
 
         i = 0
         while rclpy.ok():
+            rclpy.spin_once(self, timeout_sec=0.01)  # 触发回调更新力值
+            # --- 检查力阈值 ---
+            if (self.latest_ft_force > threshold) or (self.latest_rze_force > threshold) or (self.latest_fv_force > threshold):
+                self.get_logger().warn("Force threshold exceeded! Returning to Point A...")
+                self._move_to_pose_compat(self.goals[0])
+                break  # 停止循环
+
+            
+            # --- 正常往返运动 ---
             idx = i % 2
             cur = self.goals[idx]
-            nxt = self.goals[1 - idx]
-
+            nxt = self.goals[1 - idx]  # 下一个目标（用来估算本段路程）
+            # 估算“本段运动周期” = 末端位移 / 期望速度（单位：秒）
+            # 注意：这里只用于 sleep 估算，不改变规划方式
             dx = nxt.pose.position.x - cur.pose.position.x
             dy = nxt.pose.position.y - cur.pose.position.y
             dz = nxt.pose.position.z - cur.pose.position.z
-            seg_len = math.sqrt(dx*dx + dy*dy + dz*dz)
-            period_s = seg_len / max(EE_SPEED_MPS, 1e-6)
+            seg_len = math.sqrt(dx*dx + dy*dy + dz*dz)  # 这里已是米
+            period_s = seg_len / max(EE_SPEED_MPS, 1e-6)  # 防 0
 
             self.get_logger().info(
-                f"[{i}] target ({'A' if idx==0 else 'B'}) -> pos=({cur.pose.position.x:.3f}, {cur.pose.position.y:.3f}, {cur.pose.position.z:.3f}), period≈{period_s:.2f}s"
+                f"[{i}] target ({'A' if idx==0 else 'B'}) -> pos=({cur.pose.position.x:.3f}, {cur.pose.position.y:.3f}, {cur.pose.position.z:.3f}), "
+                f"period≈{period_s:.2f}s (by L/v)"
             )
 
-            # IK 求解
+            t0 = time.time()
             ok, js_sol = self._move_with_seed_ik(cur, seed_deg)
+
             if not ok:
                 self.get_logger().warn(f"[{i}] seed IK failed, fallback to move_to_pose()")
-                ok = self._move_to_pose_compat(cur)  # 同步调用
+                ok = self._move_to_pose_compat(cur)
                 js_sol = None
 
             if js_sol:
                 name2pos = {n: p for n, p in zip(js_sol.name, js_sol.position)}
                 seed_deg = [math.degrees(name2pos[n]) for n in robot.joint_names()]
 
-            # 在目标执行期间持续 spin_once 更新力值，并检查阈值
-            start_time = time.time()
-            while rclpy.ok() and time.time() - start_time < period_s:
-                rclpy.spin_once(self, timeout_sec=0.01)
-                if (abs(self.latest_ft_force) > threshold or
-                    abs(self.latest_rze_force) > threshold or
-                    abs(self.latest_fv_force) > threshold):
-                    self.get_logger().warn("Force threshold exceeded! Stopping and returning to A.")
-                    
-                    # 使用关节解回到 A 点
-                    ok_back, js_sol = self._move_with_seed_ik(self.goals[0], SEED_DEG)
-                    if ok_back:
-                        self.get_logger().info("Returned to point A successfully.")
-                    else:
-                        self.get_logger().error("Failed to return to point A!")
-                    return  # 停止整个循环
-                sleep(0.005)
-
             if ok:
                 self.get_logger().info(f"[{i}] Reached goal")
             else:
                 self.get_logger().warn(f"[{i}] Motion failed")
 
+            # ——最小改动的“周期化 sleep”——
+            # 若执行耗时 < 目标周期，则补足剩余时间；否则不等待直接进入下一段
+            elapsed = time.time() - t0
+            remain = max(0.0, period_s - elapsed)
+            if remain > 0:
+                sleep(remain)
+
             i += 1
 
-    # ===== IK + move_to_cfg =====
     def _move_with_seed_ik(self, pose_stamped: PoseStamped, seed_deg):
         js_sol = self._solve_ik_with_seed(pose_stamped, seed_deg)
         if not js_sol:
@@ -185,7 +183,6 @@ class FVRecipMoveNode(Node):
             return None
         return res.solution.joint_state
 
-    # ===== MoveIt2 执行关节位置 =====
     def _move_to_cfg(self, jmap: dict) -> bool:
         names = robot.joint_names()
         cur = getattr(self, "_latest_js", None)
@@ -211,17 +208,16 @@ class FVRecipMoveNode(Node):
         self.get_logger().error("No joint-move API on MoveIt2 wrapper.")
         return False
 
-    # ===== MoveIt2 同步 move_to_pose =====
     def _move_to_pose_compat(self, goal: PoseStamped) -> bool:
-        """兼容调用 MoveIt2.move_to_pose()"""
         try:
-            ret = self.moveit2.move_to_pose(goal.pose)
-            return True if ret is None else bool(ret)
-        except Exception as e:
-            self.get_logger().error(f"Failed move_to_pose: {e}")
-            return False
+            ret = self.moveit2.move_to_pose(goal.pose, frame_id=goal.header.frame_id)
+        except TypeError:
+            try:
+                ret = self.moveit2.move_to_pose(goal)
+            except TypeError:
+                ret = self.moveit2.move_to_pose(pose=goal.pose)
+        return True if ret is None else bool(ret)
 
-    # ===== 坐标转换 =====
     def poses_from_4x4_list(self, T_list, frame_id: str,
                             matrix_is_base_T_tcp: bool,
                             tcp_offset_m=(0.0, 0.0, 0.0),
@@ -238,6 +234,7 @@ class FVRecipMoveNode(Node):
                       matrix_is_base_T_tcp: bool = True,
                       tcp_offset_m=(0.0, 0.0, 0.0),
                       units_in_mm: bool = True) -> PoseStamped:
+        import numpy as np
         T = np.array(T, dtype=float)
         R, t = T[:3, :3], T[:3, 3].copy()
 
@@ -274,12 +271,13 @@ class FVRecipMoveNode(Node):
         n = math.sqrt(x*x + y*y + z*z + w*w)
         return x/n, y/n, z/n, w/n
 
-    # ===== 力回调 =====
+    # 在回调里更新力值
     def callback(self, msg: WrenchStamped):
         fx = msg.wrench.force.x
         fy = msg.wrench.force.y
         fz = msg.wrench.force.z
         self.latest_ft_force = max(abs(fx), abs(fy), abs(fz))
+        # 可选：打印或记录日志
 
     def callback_rze(self, msg: Float32):
         self.latest_rze_force = msg.data

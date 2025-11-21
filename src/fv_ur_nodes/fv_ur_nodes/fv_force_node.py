@@ -39,23 +39,11 @@ class LiveForcePlot(Node):
         # Emergency stop client
         self.force_threshold = force_threshold
         self.rze_force_threshold = rze_force_threshold
-        self.stopped = False
+        self.stopped = True ####
         self.stop_client = self.create_client(Trigger, '/dashboard_client/stop')
+        # self.stop_client = self.create_client(Trigger, '/io_and_status_controller/hand_back_control')
         if not self.stop_client.wait_for_service(timeout_sec=5.0):
             self.get_logger().warn("Dashboard stop service not available! Emergency stop will not work.")
-
-        # hand_back_control 客户端
-        self.handback_client = self.create_client(Trigger, '/io_and_status_controller/hand_back_control')
-        if not self.handback_client.wait_for_service(timeout_sec=5.0):
-            self.get_logger().warn("hand_back_control service not available! Deactivate won't work.")
-
-        # 手动去激活参数
-        self.handback_threshold = 5.0
-        self.handback_hysteresis = 1.0
-        self.handback_cooldown_s = 0.5
-        self._over_limit = False
-        self._last_handback_t = 0.0
-        
 
         # Data storage
         self.timestamps, self.fx, self.fy, self.fz = [], [], [], []
@@ -128,22 +116,10 @@ class LiveForcePlot(Node):
 
         # Continuous monitoring
         m = max(abs(fx), abs(fy), abs(fz))
-        now = time.time()
-        if not self._over_limit:
-            if m > self.handback_threshold and (now - self._last_handback_t) >= self.handback_cooldown_s:
-                self._over_limit = True
-                self._last_handback_t = now
-                self.get_logger().warn(
-                    f"Force > {self.handback_threshold:.1f}N — hand_back_control! Fx={fx:.2f}, Fy={fy:.2f}, Fz={fz:.2f}")
-                self.hand_back_control()
-        else:
-            if m < (self.handback_threshold - self.handback_hysteresis):
-                self._over_limit = False
-
         if not self.stopped and m > self.force_threshold:
             self.get_logger().warn(f"Emergency stop! Fx={fx:.2f}, Fy={fy:.2f}, Fz={fz:.2f}")
             self.emergency_stop()
-            self.stopped = True
+            # self.stopped = True
 
         # Store data
         self.timestamps.append(t)
@@ -168,7 +144,7 @@ class LiveForcePlot(Node):
         if not self.stopped and msg.data > self.rze_force_threshold:
             self.get_logger().warn(f"Emergency stop! RZE_force={msg.data:.2f}")
             self.emergency_stop()
-            self.stopped = True
+            # self.stopped = True
 
     def callback_fv(self, msg):
         t = time.time()
@@ -188,14 +164,6 @@ class LiveForcePlot(Node):
         self.fig.canvas.draw(); self.fig.canvas.flush_events()
 
     # ---- Service Calls ----
-    def hand_back_control(self):
-        if self.handback_client.service_is_ready():
-            req = Trigger.Request()
-            self.handback_client.call_async(req)
-            self.get_logger().info("Sent hand_back_control trigger to robot (deactivate).")
-        else:
-            self.get_logger().warn("hand_back_control service not ready!")
-
     def emergency_stop(self):
         if self.stop_client.service_is_ready():
             req = Trigger.Request()

@@ -12,3 +12,8 @@ ros2 run fv_ur_nodes fv_recip_trajectory_node
 
 # Check force
 ros2 run fv_ur_nodes fv_force_node
+
+
+
+# dependencies
+pip install open3d

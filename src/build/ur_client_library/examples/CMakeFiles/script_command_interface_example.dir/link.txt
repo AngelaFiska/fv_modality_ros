@@ -1,1 +1,0 @@
-/usr/bin/c++  -Wall -pedantic -O3 -DNDEBUG CMakeFiles/script_command_interface_example.dir/script_command_interface.cpp.o -o script_command_interface_example  -Wl,-rpath,/home/fv/workspace/ros_ur_driver/src/build/ur_client_library ../liburcl.so 

@@ -1,1 +1,0 @@
-/usr/bin/c++  -Wall -pedantic -O3 -DNDEBUG CMakeFiles/force_mode_example.dir/force_mode_example.cpp.o -o force_mode_example  -Wl,-rpath,/home/fv/workspace/ros_ur_driver/src/build/ur_client_library ../liburcl.so 

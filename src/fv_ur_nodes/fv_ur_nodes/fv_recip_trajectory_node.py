@@ -178,6 +178,12 @@ class FVRecipMoveNode(Node):
         req.ik_request.pose_stamped = pose_stamped
         req.ik_request.robot_state.joint_state = seed
 
+        # ✅ 关键：让 IK 避免碰撞（机器人 + 工具 + 环境）
+        req.ik_request.avoid_collisions = True
+
+        # 建议显式指定 IK 求解的末端 link（一般是 tool0）
+        req.ik_request.ik_link_name = robot.end_effector_name()
+
         fut = self._ik_cli.call_async(req)
         rclpy.spin_until_future_complete(self, fut)
         res = fut.result()

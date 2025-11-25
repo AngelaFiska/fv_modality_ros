@@ -49,7 +49,7 @@
     <visual>
       <origin xyz="0 0 0.101" rpy="0 0 0"/>
       <geometry>
-        <cylinder radius="0.05" length="0.20"/>
+        <cylinder radius="0.04" length="0.20"/>
       </geometry>
       <material name="grey">
         <color rgba="0.7 0.7 0.7 1.0"/>
@@ -59,7 +59,7 @@
     <collision>
       <origin xyz="0 0 0.101" rpy="0 0 0"/>
       <geometry>
-        <cylinder radius="0.05" length="0.20"/>
+        <cylinder radius="0.04" length="0.20"/>
       </geometry>
     </collision>
 
@@ -102,6 +102,34 @@
   <joint name="table_joint" type="fixed">
     <parent link="world"/>
     <child link="table"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </joint>
+  <!-- Table end -->
+
+  <!-- Table -->
+  <!-- 0.5m x 0.5m x 0.3m table -->
+  <link name="ground">
+    <visual>
+      <origin xyz="-0.4 0.0 -0.01" rpy="0 0 0"/>
+      <geometry>
+        <box size="1.0 1.0 0.01"/>
+      </geometry>
+      <material name="brown">
+        <color rgba="0.6 0.4 0.2 1.0"/>
+      </material>
+    </visual>
+
+    <collision>
+      <origin xyz="-0.4 0.0 -0.01" rpy="0 0 0"/>
+      <geometry>
+        <box size="1.0 1.0 0.01"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="ground_joint" type="fixed">
+    <parent link="world"/>
+    <child link="ground"/>
     <origin xyz="0 0 0" rpy="0 0 0"/>
   </joint>
   <!-- Table end -->

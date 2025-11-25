@@ -24,7 +24,8 @@ setup(
     },
     entry_points={
         'console_scripts': [
-            'fv_realsense_node = fv_realsense_nodes.fv_realsense_node:main'
+            'fv_realsense_node = fv_realsense_nodes.fv_realsense_node:main',
+            'fv_realsense_scan = fv_realsense_nodes.fv_realsense_scan:main',
         ],
     },
 )
